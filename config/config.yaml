@@ -1,0 +1,28 @@
+Misc:
+  GpuId: 0
+  OutputFolderName: 'df1b'
+  BestModelName: 'model_cls.pth'
+
+Model:
+  Name: 'resnet18'
+  IsPretrained: True
+  NumClass: 2
+  IsResume: False
+  OutputFreq: 5
+
+
+Dataset:
+  TrainPath: '/home/pi/Desktop/df1b_dataset/20191024/small_img_train/'
+  TestPath: '/home/pi/Desktop/df1b_dataset/20191024/small_img_train/'
+  BatchSize: 32
+  NumWorkers: 4
+  Epochs: 100
+
+Solver:
+  OptimName: 'sgd'
+  BaseLR: 0.05
+  WeightDecay: 0.0005
+  BiasLRFactor: 2
+  WeightDecayBias: 0.0
+  WarnupIters: 500
+  SchedulerModel: 'poly'
